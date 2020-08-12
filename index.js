@@ -40,11 +40,13 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
-
-    /*code here*/
-
+function is31Flavors(arr){
+    if(arr.length ===31){
+        return true
+    } return false
 }
+console.log(is31Flavors(originalFlavors));
+
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -57,11 +59,13 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(/*code here*/){
-
-    /*code here*/
+function addFlavor(arr){
+originalFlavors.unshift( 'rainbow sherbert');
+console.log(originalFlavors);
+    
 
 }
+addFlavor('rainbow sherbert', originalFlavors);
 
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -74,11 +78,13 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
-function removeLastFlavor(/*code here*/){
-
-    /*code here*/
+function removeLastFlavor(arr){
+originalFlavors.pop();
+console.log(originalFlavors);
+    
 
 }
+removeLastFlavor(originalFlavors);
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -144,11 +150,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
+function filterByWord(arr, string){
+newarr = [];
+for(let i = 0; i <arr.length; i++){
+    if(arr[i].includes(string)){
+        newarr.push(arr[i]);
+    }
+}
+    return newarr;
 
 }
+
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 
